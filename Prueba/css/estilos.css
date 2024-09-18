@@ -1,0 +1,32 @@
+li{
+    list-style: none;
+}
+.menu{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+.contenedor{
+    display: flex;
+    gap: 20%;
+    justify-content: center;
+}
+.contenedor p{
+    text-align: center;
+    color: white;
+}
+.encabezado{
+    text-align: center;
+}
+.bloque_verde{
+    width: 40%;
+    background-color: green;
+}
+.bloque_azul{
+    width: 40%;
+    height: 40%;
+    background-color: blue;
+}
+.derechos{
+    text-align: center;
+}
