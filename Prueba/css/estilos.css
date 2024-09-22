@@ -1,32 +1,46 @@
-li{
-    list-style: none;
+body {
+  height: 100%;
 }
-.menu{
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
+li {
+  list-style: none;
 }
-.contenedor{
-    display: flex;
-    gap: 20%;
-    justify-content: center;
+.menu {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
 }
-.contenedor p{
-    text-align: center;
-    color: white;
+.contenedor {
+  display: flex;
+  gap: 20%;
+  margin: 5%;
+  justify-content: center;
+  align-items: center;
+  /* Para ajustar la altura de los div "bloque_verde" y "bloque_azul" primero tengo que ajustar la altura de 
+  contenedor, que es el padre. La altura que modifique en % de los bloques será respectiva a la del contenedor principal */
+  height: 350px;
 }
-.encabezado{
-    text-align: center;
+.contenedor p {
+  color: white;
 }
-.bloque_verde{
-    width: 40%;
-    background-color: green;
+.encabezado {
+  text-align: center;
 }
-.bloque_azul{
-    width: 40%;
-    height: 40%;
-    background-color: blue;
+.bloque_verde {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: green;
 }
-.derechos{
-    text-align: center;
+.bloque_azul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+}
+.derechos {
+  text-align: center;
 }
