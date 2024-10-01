@@ -15,7 +15,7 @@ En la parte inferior izquierda de la web habrán enlaces de mi perfil de LinkedI
 
 En el footer de la web habrá enlaces para enviarme un e-mail, mi perfil de LinkedIn, un enlace de descarga para ver mi CV y abajo del todo copyright
 
-![Página principal de mi portfolio](Página_principal-1.png)
+![Página principal de mi portfolio](/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_principal-1.png)
 
 ### Página secundaria (Proyectos)
 
@@ -26,7 +26,7 @@ En la parte izquierda aparecerá una captura del proyecto, junto con el nombre y
 Al igual que en la página principal, abajo a la izquierda habrán enlaces a mi LinkedIn, GitHub y para enviarme un e-mail.
 
 En el footer habrá enlaces para enviarme un e-mail, mi perfil de LinkedIn, un enlace de descarga para ver mi CV y abajo del todo copyright
-![Página con proyectos personales](Página_proyectos.png)
+![Página con proyectos personales](/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_proyectos.png)
 
 ### Página principal versión móvil
 
@@ -37,7 +37,7 @@ Más abajo estará mi foto de perfil, junto con una breve descripción sobre mi 
 Luego estarán los apartados de formación académica y más abajo el apartado de skills.
 
 Abajo a la izquierda estarán los enlaces a mi e-mail, LinkedIn y Github, al igual que en el footer, junto con el apartado del copyright.
-![Versión móvil de la página principal](Página_principal_movil.png)
+![Versión móvil de la página principal](/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_principal_movil.png)
 
 ### Página secundarios (Proyectos) versión móvil
 
@@ -49,4 +49,4 @@ Del mismo modo que en el resto de las páginas, abajo a la izquierda habrán enl
 
 En el footer habrá enlaces para enviarme un e-mail, mi perfil de LinkedIn, un enlace de descarga para ver mi CV y abajo del todo copyright
 
-![Versión móvil de la página de proyectos](Página_proyectos_movil.png)
+![Versión móvil de la página de proyectos](/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_proyectos_movil.png)
