@@ -1,5 +1,6 @@
 .imagenFondo {
   height: 833px;
-  display: block;
-  margin: auto;
+  display: flex;
+  margin: 50%;
+  justify-content: center;
 }
