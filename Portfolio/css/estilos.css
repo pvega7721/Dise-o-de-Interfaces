@@ -4,3 +4,9 @@
   margin: 50%;
   justify-content: center;
 }
+
+@media screen and (max-width: 600px) {
+  .bodyPrincipal {
+    background-image: url(/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_principal_movil.png);
+  }
+}
