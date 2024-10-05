@@ -4,9 +4,25 @@
   margin: 50%;
   justify-content: center;
 }
+.fondoMovil {
+  display: none; /*Oculta la versión de móvil cuando tiene medidas de escritorio*/
+}
+.FondoProyectoMovil {
+  display: none; /*Oculta la versión de móvil cuando tiene medidas de escritorio*/
+}
 
+/*Cuando la pantalla tenga ancho <=600px oculta las imágenes de escritorio y muestra las de móvil */
 @media screen and (max-width: 600px) {
-  .bodyPrincipal {
-    background-image: url(/Dise-o-de-Interfaces/Portfolio/Imagenes/Página_principal_movil.png);
+  .fondoEscritorio {
+    display: none;
+  }
+  .fondoMovil {
+    display: block;
+  }
+  .FondoProyectoEscrtorio {
+    display: none;
+  }
+  .FondoProyectoMovil {
+    display: block;
   }
 }
