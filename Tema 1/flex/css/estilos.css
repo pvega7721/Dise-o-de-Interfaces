@@ -4,8 +4,6 @@
   height: 400px;
   width: 400px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center; /*alenea en horizontal*/
   align-content: center; /*alinea en vertical*/
 }
@@ -13,14 +11,12 @@
   background-color: pink;
   margin: 2%;
   width: 180px;
-  height: 30px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .item:first-child {
-  display: none;
-}
-.item:last-child {
-  display: none;
+  align-self: end;
+  order: 1;
 }
