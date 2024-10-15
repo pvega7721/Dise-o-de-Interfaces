@@ -13,3 +13,15 @@
 .lorem {
   margin-left: 50px;
 }
+@media (max-width: 375px) {
+  .contenedor {
+    display: none;
+    flex-direction: column;
+  }
+  body {
+    max-width: 300px;
+  }
+  .item1 {
+    margin-left: 20%;
+  }
+}
