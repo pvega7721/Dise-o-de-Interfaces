@@ -2,3 +2,14 @@
   display: flex;
   flex-direction: row;
 }
+.contenedor1 {
+  display: flex;
+  flex-direction: row;
+}
+.item1 {
+  margin-left: 190px;
+}
+
+.lorem {
+  margin-left: 50px;
+}
