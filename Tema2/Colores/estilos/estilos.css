@@ -18,12 +18,12 @@
   align-items: flex-end;
   justify-content: center;
 }
-.item.verde {
-  background-color: green;
+.item.azul {
+  background-color: #6faced;
 }
 .item.negro {
-  background-color: black;
-  color: white;
+  background-color: #2d2d2d;
+  color: #ffffff;
 }
 @media (max-width: 600px) {
   .contenedor {
