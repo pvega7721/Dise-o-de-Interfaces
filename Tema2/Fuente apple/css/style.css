@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "fuenteApple";
+  src: url(../Fonts/sf-pro-text_regular.woff2) format("woff2");
+  src: url(../Fonts/yf1qr-8hfgj.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../Fonts/Roboto-Regular.ttf) format("truetype");
+  src: url(../Fonts/Roboto.woff2) format("woff2");
+}
+h1 {
+  font-family: "fuenteApple";
+}
+.p1 {
+  font-family: Roboto;
+}

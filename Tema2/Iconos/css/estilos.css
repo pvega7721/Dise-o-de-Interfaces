@@ -1,0 +1,34 @@
+@font-face {
+  font-family: NunitoSans7pt;
+  src: url(../fonts/NunitoSans_7pt-Regular.ttf);
+}
+@font-face {
+  font-family: Nunito sans 10pt;
+  src: url(../fonts/NunitoSans_10pt-Regular.ttf);
+}
+
+html {
+  font-family: NunitoSans7pt;
+}
+.contenedor {
+  display: flex;
+  justify-content: space-around;
+}
+h1 {
+  text-align: center;
+}
+.libro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mundo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.archivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
