@@ -1,14 +1,7 @@
-@font-face {
-  font-family: NunitoSans7pt;
-  src: url(../fonts/NunitoSans_7pt-Regular.ttf);
-}
-@font-face {
-  font-family: Nunito sans 10pt;
-  src: url(../fonts/NunitoSans_10pt-Regular.ttf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 html {
-  font-family: NunitoSans7pt;
+  font-family: "Nunito Sans";
 }
 .contenedor {
   display: flex;
@@ -31,4 +24,38 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 1024px) and (min-width: 476px) {
+  .contenedor {
+    flex-wrap: wrap;
+  }
+  .archivo {
+    order: 1;
+  }
+  .libro {
+    order: 2;
+  }
+  .mundo {
+    order: 3;
+    width: 100%;
+    border: 2px solid;
+    padding: 1px;
+  }
+}
+@media (max-width: 475px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  .archivo {
+    padding: 15px;
+    order: -1;
+  }
+  .libro {
+    padding: 15px;
+    background-color: #dddddd;
+  }
+  .mundo {
+    padding: 15px;
+  }
 }
