@@ -73,7 +73,7 @@ hr {
   width: 120px;
   height: 35px;
 }
-.boton_descubreMas{
+.boton_descubreMas {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -83,5 +83,12 @@ hr {
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 5px;
 }
-
+.linea1 button,
+.linea2 button {
+  width: 100px;
+}
+.linea2 button {
+  background: linear-gradient(to left, #ffffff 70%, #ffa500 30%);
+}
