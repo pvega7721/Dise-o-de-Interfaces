@@ -1,0 +1,17 @@
+body {
+  font-size: 2em;
+  margin: 0;
+  padding: 5%;
+}
+h1 {
+  text-align: center;
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 45%;
+  row-gap: 10px;
+}

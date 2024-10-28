@@ -12,8 +12,8 @@
   align-items: center;
   gap: 30%;
 }
-.xSuperior {
-  padding-right: 10%;
+.Xicono {
+  padding-right: 25px;
 }
 body {
   background-color: rgb(226, 226, 226);
@@ -37,12 +37,13 @@ body {
   width: 20px;
   height: auto;
 }
-
 .slider {
   background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+  align-items: center;
   margin-top: 5px;
 }
 .parteInferior1 {
@@ -64,3 +65,23 @@ body {
 hr {
   margin: 0;
 }
+.comprar {
+  color: white;
+  background-color: black;
+  border-radius: 12px;
+  border: none;
+  width: 120px;
+  height: 35px;
+}
+.boton_descubreMas{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lineas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
