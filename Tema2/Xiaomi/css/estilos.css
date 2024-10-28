@@ -40,3 +40,22 @@ body {
   justify-content: space-around;
   margin-top: 5px;
 }
+.parteInferior1 {
+  display: flex;
+  background-color: #181818;
+  color: grey;
+}
+.iconos {
+  display: flex;
+}
+.titulosFooter {
+  color: white;
+}
+.parteInferior2 {
+  display: flex;
+  background-color: #181818;
+  color: white;
+}
+hr {
+  margin: 0;
+}
