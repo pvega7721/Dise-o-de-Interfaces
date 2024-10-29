@@ -95,6 +95,11 @@ hr {
 .linea1 button,
 .linea2 button {
   width: 100px;
+  border: none;
+  height: 5px;
+  border-color: lightgray;
+  background-color: lightgray;
+  border-radius: 10px;
 }
 .linea2 button {
   background: linear-gradient(to left, #ffffff 70%, #ffa500 30%);
