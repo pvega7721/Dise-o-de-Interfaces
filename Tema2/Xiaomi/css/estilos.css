@@ -95,7 +95,7 @@ hr {
 .linea1 button,
 .linea2 button {
   width: 100px;
-  border: none;
+  border: 3px solid black;
   height: 5px;
   border-color: lightgray;
   background-color: lightgray;

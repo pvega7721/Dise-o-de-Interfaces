@@ -15,3 +15,46 @@ h1 {
   margin-left: 45%;
   row-gap: 10px;
 }
+input[type="password"]:focus {
+  outline: none;
+}
+input[type="password"] {
+  padding-left: 33px;
+  height: 30px;
+  border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.divContrasena {
+  position: relative;
+  border: 1px solid;
+  display: flex;
+  flex-direction: row;
+}
+.divContrasena::before {
+  content: "";
+  align-items: center;
+  background-image: url("../Imagenes/mono-mirando.png");
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-size: cover;
+}
+
+.divContrasena:focus-within::before {
+  outline: none;
+  background-image: url(../Imagenes/mono-no-mira.png);
+}
+
+input[type="text"] {
+  height: 30px;
+  border: 1px solid;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 5px;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
