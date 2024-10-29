@@ -55,7 +55,12 @@ body {
   display: flex;
   background-color: #181818;
   color: white;
+  align-items: center;
 }
 hr {
   margin: 0;
+}
+.logos {
+  width: 20px;
+  height: 20px;
 }
