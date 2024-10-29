@@ -8,7 +8,12 @@
   margin-bottom: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30%;
+}
+.Xicono {
+  padding-right: 25px;
 }
 body {
   background-color: rgb(226, 226, 226);
@@ -32,12 +37,13 @@ body {
   width: 20px;
   height: auto;
 }
-
 .slider {
   background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  width: 100%;
+  align-items: center;
   margin-top: 5px;
 }
 .parteInferior1 {
@@ -60,7 +66,36 @@ body {
 hr {
   margin: 0;
 }
+
 .logos {
   width: 20px;
   height: 20px;
+}
+
+.comprar {
+  color: white;
+  background-color: black;
+  border-radius: 12px;
+  border: none;
+  width: 120px;
+  height: 35px;
+}
+.boton_descubreMas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lineas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.linea1 button,
+.linea2 button {
+  width: 100px;
+}
+.linea2 button {
+  background: linear-gradient(to left, #ffffff 70%, #ffa500 30%);
 }
