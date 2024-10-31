@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "fuenteXiaomi";
+  src: url(../fuentes/MiSansLatin-Regular\ 1.woff2) format("woff2");
+}
+html {
+  font-family: "fuenteXiaomi";
+}
 .BarraSuperior {
   background-color: black;
   color: white;
@@ -30,7 +37,7 @@ body {
 .navbar-derecha {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 25px;
   align-items: center;
 }
 .logoxiaomi {
@@ -134,13 +141,16 @@ hr {
   flex-direction: row;
   align-items: center;
   gap: 15px;
-  width: 300px;
+  width: 330px;
   padding-left: 10px;
   padding-right: 5px;
   border-radius: 10px;
   height: 35px;
   background-color: #181818;
   border: 1px solid white;
+}
+#miPoints {
+  text-align: center;
 }
 .menuProductos {
   display: flex;
@@ -178,7 +188,7 @@ hr {
 .app {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
 }
 #texto {
   margin-top: 15px;
