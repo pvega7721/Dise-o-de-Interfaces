@@ -50,6 +50,9 @@ body {
   display: flex;
   background-color: #181818;
   color: grey;
+  flex-direction: row;
+  gap: 60px;
+  padding-bottom: 30px;
 }
 .iconos {
   display: flex;
@@ -59,9 +62,11 @@ body {
 }
 .parteInferior2 {
   display: flex;
+  flex-direction: row;
   background-color: #181818;
   color: white;
   align-items: center;
+  justify-content: space-between;
 }
 hr {
   margin: 0;
@@ -70,6 +75,11 @@ hr {
 .logos {
   width: 20px;
   height: 20px;
+}
+.iconos {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .comprar {
@@ -103,4 +113,102 @@ hr {
 }
 .linea2 button {
   background: linear-gradient(to left, #ffffff 70%, #ffa500 30%);
+}
+
+.espana {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy {
+  display: flex;
+  gap: 15px;
+}
+.estamosEnContacto {
+  color: white;
+}
+.correo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  height: 35px;
+  background-color: #181818;
+  border: 1px solid white;
+}
+.menuProductos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.productosPopulares {
+  display: flex; /* Cambia a flex para alinear en horizontal */
+  align-items: center; /* Alinea verticalmente al centro */
+  gap: 25px;
+}
+#nuevosLanzamientos {
+  color: #ffa500;
+  border-bottom: 2px solid;
+}
+#imagenT14 {
+  width: 60%;
+  margin-bottom: 20px;
+  border-top-left-radius: 7px;
+}
+.xiaomi14tpro {
+  padding: 10px;
+  display: flex;
+  gap: 100px;
+  background-color: white;
+}
+.descripcion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+#texto {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#qr {
+  display: flex;
+  align-items: center;
+}
+h4 {
+  color: white;
+}
+#playstore img {
+  padding-left: 10px;
+  height: 30px;
+  width: 30px;
+  margin-left: 50px;
+}
+#playstore {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding-right: 30px;
+  border: 1px solid;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
