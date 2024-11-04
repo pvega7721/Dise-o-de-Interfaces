@@ -1,0 +1,49 @@
+.cuadro1 {
+  color: #ffffff;
+  background-color: #4caf50;
+  width: 50%;
+  height: 50%;
+  border-bottom: 1em dashed #999999;
+  border-right: solid 1em #000000;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.cuadro1 h1 {
+  padding-left: 1em;
+}
+.cuadro1 p {
+  padding-left: 1em;
+}
+
+.cuadro2 {
+  color: #ffffff;
+  margin-top: 2em;
+  width: 75%;
+  height: 75%;
+  border-left: solid 1em #000000;
+  border-top: solid 1em #4caf50;
+  background-color: #000000;
+  border-bottom: solid 1em #4caf50;
+}
+
+@media (max-width: 425px) {
+  body {
+    margin: 0;
+  }
+  html {
+    margin: 0;
+  }
+  .cuadro1 {
+    width: 100%;
+    background-color: #999999;
+    border-top: 1em solid #ffffff;
+    margin-bottom: 1em;
+    border-right: none;
+  }
+  .cuadro2 {
+    width: calc(100% - 2em);
+    border-bottom: 2em solid #ffffff;
+    padding-bottom: 1em;
+    border-right: solid 1em #000000;
+  }
+}

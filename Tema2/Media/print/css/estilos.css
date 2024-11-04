@@ -1,0 +1,44 @@
+.contenedor {
+  font-size: 3rem;
+}
+@media (max-width: 800px) {
+  .contenedor p {
+    font-size: 1rem;
+  }
+}
+@media print {
+  .contenedor p {
+    font-size: 1rem;
+  }
+}
+.pseudoclases a {
+  font-size: 4rem; /*enlace por defecto*/
+}
+.pseudoclases a:link {
+  color: pink; /*Enlace sin pulsar*/
+}
+.pseudoclases a:visited {
+  color: green; /*Enlace despues de haberlo visitado*/
+}
+.pseudoclases a:hover {
+  color: red; /*Mientras el ratón esté encima*/
+}
+.pseudoclases a:focus {
+  color: blue; /*cuando esté preseleccionado(por ejemplo con tab)*/
+}
+.pseudoclases a:active {
+  color: orange; /*Mientras el ratón esté encima pulsando (click sonstenido)*/
+}
+
+.seccion:hover {
+  background-color: green;
+}
+.seccion:hover p {
+  color: yellow;
+}
+.seccion {
+  padding: 10px;
+  margin-left: 40%;
+  border: 2px solid;
+  width: 50%;
+}
