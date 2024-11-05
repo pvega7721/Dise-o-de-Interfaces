@@ -1,0 +1,60 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../Fuentes/OpenSans-Regular.ttf);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: OpenSans;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+/*-----------------------Parte izquierda-----------------------*/
+.izquierda {
+  width: 40%;
+  height: 100%;
+  background-color: rgb(58, 217, 133);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 70px;
+  padding-right: 10px;
+  padding-bottom: 1em;
+  padding-left: 3em;
+}
+.textoGrande,
+.textoPequeño {
+  width: 250px;
+}
+.ipsumAmarillo {
+  color: yellow;
+}
+/*-----------------------Parte derecha-----------------------*/
+input[type="text"],
+input[type="password"] {
+  border: none;
+}
+.derecha {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding-top: 60px;
+  margin-right: 0;
+  align-items: center;
+}
+.inputCorreo,
+.inputContraseña {
+  border-bottom: 1px solid black;
+  width: 400px;
+}
+.cuentaPago {
+  background-color: gray;
+  border-radius: 100px;
+  width: 75%;
+}
