@@ -39,6 +39,10 @@ input[type="text"],
 input[type="password"] {
   border: none;
 }
+.contenido {
+  width: 350px;
+  margin-top: 80px;
+}
 .derecha {
   width: 60%;
   display: flex;
@@ -47,14 +51,45 @@ input[type="password"] {
   padding-top: 60px;
   margin-right: 0;
   align-items: center;
+
 }
 .inputCorreo,
 .inputContraseña {
   border-bottom: 1px solid black;
-  width: 400px;
+  width: 100%;
+}
+a {
+  color: black;
+}
+.enlaces {
+  font-size: 70%;
 }
 .cuentaPago {
   background-color: gray;
   border-radius: 100px;
   width: 75%;
+}
+#correoTel {
+  width: 100%;
+}
+#enviar {
+  border: 1px solid;
+  border-color: white;
+  color: white;
+  height: 55px;
+  border-radius: 30px;
+  background-color: #4aa275;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.boton {
+  border: 1px solid;
+  border-color: #ebeaea;
+  border-radius: 30px;
+  background-color: #ebeaea;
+  text-align: center;
+  margin-top: 10px;
+  height: 55px;
 }
