@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Web Services</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <div class="contenedor">
+        <img src="imagenes/logo aws.webp" alt="Imagen logotipo de Amazon Web Services">
+      <h1>Iniciar sesión</h1>
+      <form action="">
+          <div class="usuario">
+            <input type="radio" name="usuario" class="tituloUsuario">Usuario raíz</input>
+            <p>
+              Propietario de la cuenta que realiza tareas que requieren acceso
+              ilimitado. <a href=""> Más información</a>
+            </p>
+          </div>
+          <div class="usuario">
+            <input type="radio" name="usuario" class="tituloUsuario">Usuario de IAM</input>
+            <p>
+              Usuario de una cuenta que realiza tareas diarias.
+              <a href=""> Más información</a>
+            </p>
+          </div>
+          <p>Dirección de email del usuario raíz</p>
+          <div id="divCorreo">
+              <input type="text" id="correo" placeholder="nombreusuario@ejemplo.com"><br>
+          </div>
+          <input type="submit" id="siguiente" value="Siguiente">
+      </form>
+      <p id="textoFinal">Al continuar, acepta el <a href="">Contrato de cliente de AWS</a> u otro acuerdo para los servicios de AWS y el <a href="">Aviso de privacidad</a>. Este sitio utiliza cookies esenciales. Consulte nuestro <a href="">Aviso de cookies</a> para obtener más información.</p>
+    </div>
+  </body>
+</html>
