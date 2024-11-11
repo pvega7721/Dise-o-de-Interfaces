@@ -51,12 +51,33 @@ input[type="password"] {
   padding-top: 60px;
   margin-right: 0;
   align-items: center;
-
 }
 .inputCorreo,
 .inputContraseña {
   border-bottom: 1px solid black;
-  width: 100%;
+  width: 350px;
+  height: 32px;
+}
+.inputContraseña:focus-within::after {
+  outline: none;
+  background-image: url(../imagenes/ojo-cerrado.webp);
+}
+.inputContraseña::after {
+  content: "";
+  align-items: center;
+  background-image: url("../Imagenes/ojo-abierto.webp");
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  background-size: cover;
+}
+#contraseña {
+  width: 320px;
+  outline: none;
+}
+#correoTel {
+  width: 320px;
+  outline: none;
 }
 a {
   color: black;
