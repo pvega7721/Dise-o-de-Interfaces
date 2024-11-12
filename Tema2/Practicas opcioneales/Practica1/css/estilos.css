@@ -1,5 +1,10 @@
+@font-face {
+  font-family: "openSans";
+  src: url(../Fuentes/OpenSans-Regular.ttf) format("truetype");
+}
 html {
   height: 100%;
+  font-family: "openSans";
 }
 .contenedor {
   margin: 0 auto;
@@ -39,7 +44,7 @@ a {
 }
 #divCorreo {
   width: 350px;
-  height: 20px;
+  height: 25px;
   border: 1px solid gray;
   border-radius: 3px;
   margin-bottom: 20px;
@@ -68,4 +73,7 @@ input[type="radio"]:focus {
 }
 h1 {
   margin-left: 10px;
+}
+p{
+  font-size: 88%;
 }
