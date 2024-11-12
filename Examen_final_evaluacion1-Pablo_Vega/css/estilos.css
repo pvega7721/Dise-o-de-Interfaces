@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "NunitoSansRegular";
+  src: url(../fuentes/NunitoSans_7pt-Regular.ttf) format("truetype");
+}
+html {
+  height: 100%;
+  font-family: "NunitoSansRegular";
+}
+body {
+  height: 100%;
+}
+#barraSuperior {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30px;
+}
+.principal {
+  background-color: white;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin-top: 0;
+  width: 500px;
+  padding-right: 15px;
+  padding-left: 20px;
+  height: 500px;
+}
+#enviar {
+  width: 506px;
+  color: white;
+  background-color: green;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+}
+#correo {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 25px;
+  height: 20px;
+}
+#contraseña {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 20px;
+  margin-top: 7px;
+  margin-bottom: 25px;
+}
+#olvidado {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 900px;
+  top: 200px;
+}
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  width: 535px;
+  margin-top: 40px;
+}
+.cuerpo {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.entrar {
+  text-align: center;
+  width: 50%;
+  border-top: 4px solid #1450a0;
+  background-color: white;
+}
+.soyNuevo {
+  background-color: #000;
+  color: white;
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 625px) {
+  .uno {
+    display: none;
+  }
+  .tres {
+    display: none;
+  }
+  .dos {
+    color: white;
+  }
+  #barraSuperior {
+    background-color: #000;
+  }
+  .cuerpo {
+    background-color: wheat;
+  }
+  .soyNuevo {
+    background-color: wheat;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 490px;
+    top: 64px;
+  }
+}
