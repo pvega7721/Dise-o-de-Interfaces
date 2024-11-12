@@ -1,0 +1,53 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+#barraSuperior {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  align-items: center;
+}
+img {
+  width: 40px;
+  height: 30px;
+}
+#divLogo {
+  border: 1px solid gray;
+  border-radius: 15%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#central {
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#inputCorreo {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+#correoTel {
+  border: none;
+  width: 380px;
+}
+a {
+  text-decoration: none;
+  color: rgb(81, 149, 211);
+}
+#texto {
+  width: 300px;
+  font-size: 75%;
+  text-align: center;
+}
