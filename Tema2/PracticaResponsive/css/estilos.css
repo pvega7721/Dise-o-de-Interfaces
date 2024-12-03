@@ -157,13 +157,26 @@ section.otros .imagen img {
     height: auto;
   }
   section.participa {
-    text-align: center;
     margin: 0 0 40px 0;
   }
   section.otros .imagen {
     margin: 0;
   }
-  section.otros{
-    
+  section.otros {
+    padding: 0 20px;
+  }
+  section.otros .texto,
+  section.otros .imagen {
+    width: 100%;
+    margin: 0;
+  }
+  .imagen img {
+    margin-bottom: 20px;
+  }
+  footer p {
+    margin-bottom: 0;
+  }
+  .logo {
+    margin-bottom: 10px;
   }
 }
