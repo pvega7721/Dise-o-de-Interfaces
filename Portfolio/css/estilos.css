@@ -1,28 +1,39 @@
-.imagenFondo {
-  height: 833px;
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #2d2d2d;
+  height: 100%;
+}
+#barra-navegacion {
   display: flex;
-  margin: 50%;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: right;
+  gap: 25px;
+  padding-right: 25px;
+  border-bottom: 1px solid black;
 }
-.fondoMovil {
-  display: none; /*Oculta la versión de móvil cuando tiene medidas de escritorio*/
+#barra-navegacion a {
+  color: #679cd5;
+  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
-.FondoProyectoMovil {
-  display: none; /*Oculta la versión de móvil cuando tiene medidas de escritorio*/
+.menu-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40px;
+  height: 100%;
+  justify-content: end;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
-
+.menu-lateral img {
+  height: 30px;
+  width: auto;
+}
 /*Cuando la pantalla tenga ancho <=600px oculta las imágenes de escritorio y muestra las de móvil */
 @media screen and (max-width: 600px) {
-  .fondoEscritorio {
-    display: none;
-  }
-  .fondoMovil {
-    display: block;
-  }
-  .FondoProyectoEscrtorio {
-    display: none;
-  }
-  .FondoProyectoMovil {
-    display: block;
-  }
 }
