@@ -1,0 +1,50 @@
+#imagenes{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    width: 150px;
+}
+#barra_superior{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #F1F1F1;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 15px;
+}
+#botonSuperior{
+    background-color: rgb(46, 46, 46);
+    color: #fff;
+    text-align: center;
+    width: 85px;
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+}
+#letreros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#letreros h1, #letreros p{
+    padding: 0% 0%;
+    margin: 1% 1%;
+}
+#taza, #cacerola, #cafetera{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.boton{
+    color: #F1F1F1;
+    background-color: blue;
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    width: 40px;
+}
