@@ -48,7 +48,20 @@ $(document).ready(function () {
 /*Ejercicio 3*/
 
 $(document).ready(function () {
-  var intervalo = setInterval(function () {
-    console.log("Hola");
-  }, 2000);
+  $(document).on("keydown", function (e) {
+    if (e.key == "ArrowRight") {
+      let contador = 0;
+      let posicion = 0;
+      var intervalo = setInterval(function () {
+        posicion = parseInt($(".bloque").css("left")) + 10;
+        $(".bloque").css("left", posicion);
+        contador++;
+        if (contador > 5) {
+          clearInterval(intervalo);
+        }
+      }, 250);
+    } else {
+      console.log("Otra tecla");
+    }
+  });
 });
