@@ -34,6 +34,25 @@ body {
   height: 30px;
   width: auto;
 }
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+#enlaces{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+footer img{
+  height: 30px;
+  width: auto;
+}
 /*Cuando la pantalla tenga ancho <=600px oculta las imágenes de escritorio y muestra las de móvil */
 @media screen and (max-width: 600px) {
 }
