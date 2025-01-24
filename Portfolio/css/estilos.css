@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  font-size: large;
 }
 body {
   margin: 0;
@@ -34,7 +35,7 @@ body {
   height: 30px;
   width: auto;
 }
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,13 +45,36 @@ footer{
   padding-bottom: 10px;
   color: white;
 }
-#enlaces{
+#enlaces {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-footer img{
+footer img {
   height: 30px;
+  width: auto;
+}
+#fotoPerfil {
+  margin-left: 10%;
+  padding-top: 30px;
+  height: 100px;
+  width: auto;
+}
+#central {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.textos {
+  display: flex;
+  flex-direction: row;
+}
+.textos img {
+  height: 60px;
   width: auto;
 }
 /*Cuando la pantalla tenga ancho <=600px oculta las imágenes de escritorio y muestra las de móvil */
