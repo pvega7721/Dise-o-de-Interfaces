@@ -68,6 +68,10 @@ footer img {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  color:white;
+}
+#central img{
+  margin-right: 20px;
 }
 .textos {
   display: flex;
