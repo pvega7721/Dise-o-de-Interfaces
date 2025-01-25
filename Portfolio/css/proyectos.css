@@ -1,8 +1,11 @@
 html {
     height: 100%;
+    width: 100%;
     font-size: large;
   }
   body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     background-color: #2d2d2d;
     height: 100%;
@@ -61,21 +64,30 @@ html {
     width: auto;
   }
   #central {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* divide en 4 columnas iguales */
-  gap: 20px; /* espaciado entre las celdas */
-  align-items: center;
-  justify-content: center;
-  padding-left:300px ;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* divide en 4 columnas iguales */
+    gap: 100px; /* espaciado entre las celdas */
+    align-items: center;
+    justify-content: center;
+    padding-left:300px;
+}
+#central h3{
+    color: white;
+}
+#central p{
+    width: 600px;
 }
 #Imagenes_proyectos{
     display: flex;
     flex-direction: column;
     gap: 100px;
-    padding-top: 100px;
+    padding-top: 130px;
+    margin-right: 100px;
 }
-/*
+
 #central img {
-    width: 100%; /* ajusta el ancho de las imágenes a la altura de la cuadricula 
+    width: 500px; /* ajusta el ancho de las imágenes a la altura de la cuadricula*/
 }
-*/
+@media screen and (max-width: 600px) {
+}
