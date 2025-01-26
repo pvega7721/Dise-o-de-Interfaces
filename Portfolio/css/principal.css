@@ -85,4 +85,59 @@ footer img {
 }
 
 @media screen and (max-width: 600px) {
+  #barra-navegacion {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    gap: 15px;
+    
+  }
+
+  #fotoPerfil {
+    position: relative;
+    left: 0;
+    top: 20px;
+    margin: 0 auto;
+  }
+
+  #central {
+    width: 90%;
+    padding-top: 30px;
+  }
+
+  .textos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textos img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    height: 50px;
+  }
+
+  .menu-lateral {
+    display: none;
+  }
+
+  footer p {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  #central img {
+    margin-right: 0;
+  }
+
+  #central p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  #enlaces {
+    gap: 15px;
+  }
 }
