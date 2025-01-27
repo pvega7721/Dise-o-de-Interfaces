@@ -1,0 +1,8 @@
+/*Recomendable para accesibilidad, al tabular aparecerá el enlace para saltar al contenido principal */
+.enlaceSalto {
+  position: absolute;
+  top: -50px;
+}
+.enlaceSalto:focus {
+  top: 0;
+}
