@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+html{
+  background-color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 button {
   color: #ffffff;
   background-color: #1b74e4;
@@ -14,6 +29,12 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 7px;
+
 }
 #botones {
   display: flex;
@@ -33,4 +54,96 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+main {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  color: #757575;
+}
+header{
+  color: #3c3c3c;
+  margin-top: 20%
+}
+
+#contenedor_form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+
+}
+#contenedor_form input{
+  width: 400px;
+  height: 30px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+#paswdOlvidada a{
+  margin-right: 50px;
+  text-decoration: none;
+  color: blue;
+}
+#paswdOlvidada button{
+  width: 150px;
+}
+#logInCon{
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #f2f2f2;
+  border-radius: 7px;
+}
+#facebook{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: #1b74e4;
+  width: 300px;
+}
+#google{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-color: white;
+  color: black;
+  border: solid 1px rgb(206, 206, 206);
+  width: 300px;
+}
+img{
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+.rrss{
+  border: none;
+  background-color: transparent;
+}
+#googlebtn{
+  color: black;
+}
+#contenedor_form2{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

@@ -29,6 +29,33 @@
           </div>
         </div>
       </div>
+      <!--Formulario oculto -->
+      <div id="contenedor_form2" style="display: none;" >
+        <h2>Cuenta</h2>
+        <div id="contenedor_form" >
+          <form>
+              <input type="text" id="correo" name="correo" placeholder="Correo electrónico o nombre de acceso" required />
+            <br>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required/>
+            <br>
+            <div id="paswdOlvidada">
+              <a href="">¿Has olvidado la contraseña?</a>
+              <button id="enviar" type="submit" disabled>Iniciar sesión</button>
+            </div>
+            <div id="logInCon">
+              <p>Inicia sesión con</p>
+              <div id="facebook">
+                <img src="Imagenes/facebook.png">
+                <button class="rrss">Facebook</button>
+              </div>
+              <div id="google">
+                <img src="Imagenes/google.png">
+                <button class="rrss" id="googlebtn">Google</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
   </body>
 </html>
