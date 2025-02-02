@@ -55,7 +55,8 @@ h1 {
   justify-content: center;
   flex-direction: column;
 }
-main {
+
+#contenedor1{ /*Acceso */
   background-color: #f2f2f2;
   margin: 0 auto;
   padding-top: 0;
@@ -67,7 +68,19 @@ main {
   width: 100%;
   color: #757575;
 }
-header{
+#contenedor2{ /*Cuenta */
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  padding-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  color: #757575;
+}
+h2{
   color: #3c3c3c;
   margin-top: 20%
 }
@@ -146,4 +159,60 @@ img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#enviar:disabled{
+  background-color: #b3b3b3 !important;
+}
+
+#contenedor3{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#enlaces{
+  display: flex;
+  gap: 15px;
+}
+#proveedor, #cliente{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100px;
+  width: 300px;
+  border-radius: 7px;
+  gap: 10px;
+}
+#enlaces img{
+  height: 15px;
+  width: 15px;
+}
+#contenedor4{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.par{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#condiciones{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#contenedor4 form{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 8px solid white;
+  padding: 10px;
+  height: 600px;
 }
