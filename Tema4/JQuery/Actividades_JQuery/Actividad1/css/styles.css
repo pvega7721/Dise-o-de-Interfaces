@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
-html{
+html {
   background-color: #f2f2f2;
   height: 100%;
   width: 100%;
@@ -34,7 +34,6 @@ h1 {
   padding-left: 50px;
   padding-right: 50px;
   border-radius: 7px;
-
 }
 #botones {
   display: flex;
@@ -56,7 +55,8 @@ h1 {
   flex-direction: column;
 }
 
-#contenedor1{ /*Acceso */
+#contenedor1 {
+  /*Acceso */
   background-color: #f2f2f2;
   margin: 0 auto;
   padding-top: 0;
@@ -68,7 +68,8 @@ h1 {
   width: 100%;
   color: #757575;
 }
-#contenedor2{ /*Cuenta */
+#contenedor2 {
+  /*Cuenta */
   background-color: #f2f2f2;
   margin: 0 auto;
   padding-top: 0;
@@ -80,12 +81,12 @@ h1 {
   width: 100%;
   color: #757575;
 }
-h2{
+h2 {
   color: #3c3c3c;
-  margin-top: 20%
+  margin-top: 20%;
 }
 
-#contenedor_form{
+#contenedor_form {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -96,23 +97,22 @@ h2{
   width: 600px;
   height: 400px;
   background-color: white;
-
 }
-#contenedor_form input{
+#contenedor_form input {
   width: 400px;
   height: 30px;
   padding-left: 10px;
   margin-bottom: 10px;
 }
-#paswdOlvidada a{
+#paswdOlvidada a {
   margin-right: 50px;
   text-decoration: none;
   color: blue;
 }
-#paswdOlvidada button{
+#paswdOlvidada button {
   width: 150px;
 }
-#logInCon{
+#logInCon {
   margin-top: 20px;
   padding-bottom: 20px;
   display: flex;
@@ -123,7 +123,7 @@ h2{
   background-color: #f2f2f2;
   border-radius: 7px;
 }
-#facebook{
+#facebook {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@ h2{
   background-color: #1b74e4;
   width: 300px;
 }
-#google{
+#google {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,41 +141,42 @@ h2{
   border: solid 1px rgb(206, 206, 206);
   width: 300px;
 }
-img{
+img {
   margin-left: 10px;
   width: 25px;
   height: 25px;
 }
-.rrss{
+.rrss {
   border: none;
   background-color: transparent;
 }
-#googlebtn{
+#googlebtn {
   color: black;
 }
-#contenedor_form2{
+#contenedor_form2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#enviar:disabled{
+#enviar:disabled {
   background-color: #b3b3b3 !important;
 }
 
-#contenedor3{
+#contenedor3 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#enlaces{
+#enlaces {
   display: flex;
   gap: 15px;
 }
-#proveedor, #cliente{
+#proveedor,
+#cliente {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,30 +187,30 @@ img{
   border-radius: 7px;
   gap: 10px;
 }
-#enlaces img{
+#enlaces img {
   height: 15px;
   width: 15px;
 }
-#contenedor4{
+#contenedor4 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.par{
+.par {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-right: 100px;
 }
-#condiciones{
+#condiciones {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-#contenedor4 form{
+#contenedor4 form {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -217,7 +218,42 @@ img{
   padding: 10px;
   height: 600px;
 }
-.par input{
+.par input {
   width: 500px;
   height: 25px;
+}
+#contenedor5 form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 8px solid white;
+  padding: 10px;
+  height: 600px;
+}
+#contenedor5 {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#crear5 {
+  align-self: center;
+}
+#crear5:disabled {
+  background-color: #b3b3b3 !important;
+}
+#crear4 {
+  align-self: center;
+}
+#crear4:disabled {
+  background-color: #b3b3b3 !important;
+}
+.error {
+  color: red;
+}
+.inputError {
+  color: red;
+  border-color: red;
+  background-color: #ffadad;
 }
