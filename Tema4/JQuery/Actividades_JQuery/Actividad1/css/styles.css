@@ -202,6 +202,7 @@ img{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-right: 100px;
 }
 #condiciones{
   display: flex;
@@ -215,4 +216,8 @@ img{
   border: 8px solid white;
   padding: 10px;
   height: 600px;
+}
+.par input{
+  width: 500px;
+  height: 25px;
 }
