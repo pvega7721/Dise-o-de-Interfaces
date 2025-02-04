@@ -83,7 +83,7 @@ h1 {
 }
 h2 {
   color: #3c3c3c;
-  margin-top: 20%;
+  margin-top: 100px;
 }
 
 #contenedor_form {
@@ -162,6 +162,10 @@ img {
 }
 #enviar:disabled {
   background-color: #b3b3b3 !important;
+}
+
+#labelCorreo4{
+  margin-right: 120px;
 }
 
 #contenedor3 {
@@ -255,5 +259,35 @@ img {
 .inputError {
   color: red;
   border-color: red;
-  background-color: #ffadad;
+  background-color: #ffadad !important;
+}
+.ojo img{
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+  margin-right: 5px;
+}
+.ojo{
+  display: flex;
+  align-items: center;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  background-color: white;
+}
+.contrasena{
+  width: 480px !important;
+  padding-right: 0;
+  margin-right: 0;
+  border: none;
+}
+#contenedor6, #contenedor7 {
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid white;
+  margin-top: 100px;
+  height: 80px;
+  width: 600px;
 }

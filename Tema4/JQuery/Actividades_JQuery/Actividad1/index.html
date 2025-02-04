@@ -88,7 +88,7 @@
       </div>
       <div id="contenedor4" style="display: none">
         <h2>Crear una cuenta Proveedor</h2>
-        <form>
+        <form id="formulario4">
           <div class="par">
             <label for="nombre">Nombre comercial</label>
             <div id="nombre4">
@@ -98,41 +98,69 @@
                 id="inputNombre4"
                 maxlength="10"
               />
-              <p class="error" id="mensajeError" hidden>
+              <p class="error" id="nombreError" hidden>
                 No se puede dejar en blanco
               </p>
               <p>Nota: No hace falta que coincida con el nombre legal.</p>
             </div>
           </div>
           <div class="par">
-            <label for="correo">Correo electrónico</label>
-            <input
-              type="text"
-              id="correo4"
-              placeholder="Escribe tu correo electrónico"
-            />
+            <label for="correo" id="labelCorreo4">Correo electrónico</label>
+            <div id="correo4">
+              <input
+                type="text"
+                id="inputCorreo4"
+                placeholder="Escribe tu correo electrónico"
+              />
+              <p class="error" id="mailError" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
             <br />
           </div>
           <div class="par">
             <label for="contrasena">Contraseña</label>
-            <input
-              type="password"
-              id="contrasena4"
-              placeholder="Introduce tu contraseña"
-            />
+            <div id="contr4">
+              <div class="ojo" id="ojo4">
+                <input
+                  type="password"
+                  id="inputContrasena4"
+                  class="contrasena"
+                  placeholder="Introduce tu contraseña"
+                />
+                <img src="Imagenes/ojo_cerrado.svg" id="imagenOjoCerrado4" alt="">
+                <img src="Imagenes/ojo_abierto.svg" id="imagenOjoAbierto4" alt="" hidden>
+              </div>
+              <p class="error" id="contError" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
           </div>
           <div class="par">
             <label for="confirmarContrasena">Confirmar contraseña</label>
-            <input
-              type="password"
-              id="confContrasena4"
-              placeholder="Confirma tu contraseña"
-            />
+            <div id="confCont4">
+              <div class="ojo" id="ojoConf4">
+                <input
+                  type="password"
+                  id="inputConfContrasena4"
+                  class="contrasena"
+                  placeholder="Confirma tu contraseña"
+                />
+                <img src="Imagenes/ojo_cerrado.svg" id="imagenOjoCerrado4-1" alt="">
+                <img src="Imagenes/ojo_abierto.svg" id="imagenOjoAbierto4-1" alt="" hidden>
+              </div>
+              <p class="error" id="confContError" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
           </div>
           <div class="par">
             <label for="nacimiento">Fecha de nacimiento</label>
             <div id="divFecha">
-              <input type="date" id="nacimiento4" />
+              <input type="date" id="InputNacimiento4" />
+              <p class="error" id="fechaError" hidden>
+                Debes seleccionar una fecha
+              </p>
               <p>Nota: No podrás cambiar tu fecha de nacimiento más adelante</p>
             </div>
           </div>
@@ -140,7 +168,7 @@
             <div>
               <hr />
               <div id="condiciones">
-                <input type="checkbox" checked />
+                <input type="checkbox" id="check4" checked />
                 <p>
                   Confirmo que acepto los términos del contrato de la cuenta y
                   que estoy de acuerdo con la política de privacidad.
@@ -149,44 +177,77 @@
               <hr />
             </div>
           </div>
-          <button type="submit" id="crear4" disabled>Crear</button>
+          <button id="crear4" disabled>Crear</button>
         </form>
+        <div id="contenedor7">
+          <p>Gracias por crear tu cuenta</p>
+        </div>
       </div>
       <div id="contenedor5" style="display: none">
         <h2>Crear una cuenta Cliente</h2>
-        <form>
+        <form id="formulario5">
           <div class="par">
             <label for="nombre">Nombre completo</label>
-            <input type="text" id="nombre5" placeholder="Nombre" />
+            <div>
+              <input type="text" id="inputNombre5" placeholder="Nombre" />
+              <p class="error" id="nombreError5" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
           </div>
           <div class="par">
             <label for="correo">Correo electrónico</label>
-            <input
-              type="text"
-              id="correo5"
-              placeholder="Escribe tu correo electrónico"
-            />
+            <div>
+              <input
+                type="text"
+                id="inputCorreo5"
+                placeholder="Escribe tu correo electrónico"
+              />
+              <p class="error" id="mailError5" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
           </div>
           <div class="par">
             <label for="contrasena">Contraseña</label>
-            <input
-              type="password"
-              id="contrasena5"
-              placeholder="Introduce tu contraseña"
-            />
+            <div>
+              <div class="ojo" id="ojo5">
+                <input
+                  type="password"
+                  id="inputContrasena5"
+                  class="contrasena"
+                  placeholder="Introduce tu contraseña"
+                />
+                <img src="Imagenes/ojo_cerrado.svg" id="imagenOjoCerrado5" alt="">
+                <img src="Imagenes/ojo_abierto.svg" id="imagenOjoAbierto5" alt="" hidden>
+              </div>
+              <p class="error" id="contError5" hidden>
+                No se puede dejar en blanco
+              </p>
+            </div>
           </div>
           <div class="par">
             <label for="confirmarContrasena">Confirmar contraseña</label>
-            <input
-              type="password"
-              id="confContrasena5"
-              placeholder="Confirma tu contraseña"
-            />
+            <div>
+              <div class="ojo" id="ojoConf5">
+                <input
+                  type="password"
+                  id="inputConfContrasena5"
+                  class="contrasena"
+                  placeholder="Confirma tu contraseña"
+                />
+                <img src="Imagenes/ojo_cerrado.svg" id="imagenOjoCerrado5-1" alt="">
+                <img src="Imagenes/ojo_abierto.svg" id="imagenOjoAbierto5-1" alt="" hidden>
+              </div>
+                <p class="error" id="confContError5" hidden>
+                  No se puede dejar en blanco
+                </p>
+            </div>
           </div>
           <div>
             <hr />
             <div id="condiciones">
-              <input type="checkbox" checked />
+              <input type="checkbox" id="check5" checked />
               <p>
                 Confirmo que acepto los términos del contrato de la cuenta y que
                 estoy de acuerdo con la política de privacidad.
@@ -194,8 +255,11 @@
             </div>
             <hr />
           </div>
-          <button type="submit" id="crear5" disabled>Crear</button>
+          <button id="crear5" disabled>Crear</button>
         </form>
+        <div id="contenedor6">
+          <p>Gracias por crear tu cuenta</p>
+        </div>
       </div>
     </main>
     <script
