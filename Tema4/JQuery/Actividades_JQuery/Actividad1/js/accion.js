@@ -56,12 +56,16 @@ $(document).ready(function () {
   var botonCrear5 = $("#crear5");
   var formulario5 = $("#formulario5");
 
-  //Al pulsar el botón Crear, si todo ha ido bien mostrará un mensaje de éxito
+  //Al pulsar el botón Crear, si todo ha ido bien mostrará un mensaje de éxito                                    -----                                                                           ---
   botonCrear5.on("click", function (e) {
     e.preventDefault();
-    formulario5.slideUp(500, function () {
-      contenedor6.slideDown(500);
-    });
+    if (inputContr5.val() !== inputConfContr5.val()) {
+      $("#coincidirContrasena5").prop("hidden", false);
+    } else {
+      formulario5.slideUp(500, function () {
+        contenedor6.slideDown(500);
+      });
+    }
   });
 
   var ojoAbierto5 = $("#imagenOjoAbierto5");
@@ -69,7 +73,7 @@ $(document).ready(function () {
 
   //Al pulsar el ojo, se muestra la contraseña y se cambia la imagen
   ojoCerrado5.on("click", function () {
-    if(inputContr5.attr("type") === "password"){
+    if (inputContr5.attr("type") === "password") {
       inputContr5.attr("type", "text");
       ojoAbierto5.prop("hidden", false);
       ojoCerrado5.prop("hidden", true);
@@ -77,7 +81,7 @@ $(document).ready(function () {
   });
 
   ojoAbierto5.on("click", function () {
-    if(inputContr5.attr("type") === "text"){
+    if (inputContr5.attr("type") === "text") {
       inputContr5.attr("type", "password");
       ojoAbierto5.prop("hidden", true);
       ojoCerrado5.prop("hidden", false);
@@ -89,7 +93,7 @@ $(document).ready(function () {
 
   //Lo mismo para confirmar contraseña
   ojoCerradoConf5.on("click", function () {
-    if(inputConfContr5.attr("type") === "password"){
+    if (inputConfContr5.attr("type") === "password") {
       inputConfContr5.attr("type", "text");
       ojoAbiertoConf5.prop("hidden", false);
       ojoCerradoConf5.prop("hidden", true);
@@ -97,7 +101,7 @@ $(document).ready(function () {
   });
 
   ojoAbiertoConf5.on("click", function () {
-    if(inputConfContr5.attr("type") === "text"){
+    if (inputConfContr5.attr("type") === "text") {
       inputConfContr5.attr("type", "password");
       ojoAbiertoConf5.prop("hidden", true);
       ojoCerradoConf5.prop("hidden", false);
@@ -107,9 +111,9 @@ $(document).ready(function () {
   //funcionalidad del ojo para el contenedor 4
   var ojoAbierto4 = $("#imagenOjoAbierto4");
   var ojoCerrado4 = $("#imagenOjoCerrado4");
-  
+
   ojoCerrado4.on("click", function () {
-    if(inputContr4.attr("type") === "password"){
+    if (inputContr4.attr("type") === "password") {
       inputContr4.attr("type", "text");
       ojoAbierto4.prop("hidden", false);
       ojoCerrado4.prop("hidden", true);
@@ -117,7 +121,7 @@ $(document).ready(function () {
   });
 
   ojoAbierto4.on("click", function () {
-    if(inputContr4.attr("type") === "text"){
+    if (inputContr4.attr("type") === "text") {
       inputContr4.attr("type", "password");
       ojoAbierto4.prop("hidden", true);
       ojoCerrado4.prop("hidden", false);
@@ -128,7 +132,7 @@ $(document).ready(function () {
   var ojoCerradoConf4 = $("#imagenOjoCerrado4-1");
   //Lo mismo para confirmar contraseña
   ojoCerradoConf4.on("click", function () {
-    if(inputConfContr4.attr("type") === "password"){
+    if (inputConfContr4.attr("type") === "password") {
       inputConfContr4.attr("type", "text");
       ojoAbiertoConf4.prop("hidden", false);
       ojoCerradoConf4.prop("hidden", true);
@@ -136,37 +140,34 @@ $(document).ready(function () {
   });
 
   ojoAbiertoConf4.on("click", function () {
-    if(inputConfContr4.attr("type") === "text"){
+    if (inputConfContr4.attr("type") === "text") {
       inputConfContr4.attr("type", "password");
       ojoAbiertoConf4.prop("hidden", true);
       ojoCerradoConf4.prop("hidden", false);
     }
   });
 
-
-
   //Hasta que no estén todos los campos rellenos, el botón estará deshabilitado
-  $("#inputNombre5, #inputCorreo5, #inputContrasena5, #inputConfContrasena5, #check5").on(
-    "input",
-    function () {
-      var nombreValor = inputNombre5.val();
-      var emailValor = inputMail5.val();
-      var contValor = inputContr5.val();
-      var confContValor = inputConfContr5.val();
-      var check5 = $("#check5").prop("checked");
-      if (
-        nombreValor !== "" &&
-        emailValor !== "" &&
-        contValor !== "" &&
-        confContValor !== "" &&
-        check5 === true
-      ) {
-        botonCrear5.prop("disabled", false);
-      } else {
-        botonCrear5.prop("disabled", true);
-      }
+  $(
+    "#inputNombre5, #inputCorreo5, #inputContrasena5, #inputConfContrasena5, #check5"
+  ).on("input", function () {
+    var nombreValor = inputNombre5.val();
+    var emailValor = inputMail5.val();
+    var contValor = inputContr5.val();
+    var confContValor = inputConfContr5.val();
+    var check5 = $("#check5").prop("checked");
+    if (
+      nombreValor !== "" &&
+      emailValor !== "" &&
+      contValor !== "" &&
+      confContValor !== "" &&
+      check5 === true
+    ) {
+      botonCrear5.prop("disabled", false);
+    } else {
+      botonCrear5.prop("disabled", true);
     }
-  );
+  });
   //Error blur nombre
   inputNombre5.blur(function () {
     if ($(this).val().trim() === "") {
@@ -195,35 +196,35 @@ $(document).ready(function () {
   });
   var divContrasena = $("#ojo5");
 
-    //Error blur contraseña
-    inputContr5.blur(function () {
-      if ($(this).val().trim() === "") {
-        $(this).addClass("error");
-        divContrasena.addClass("inputError");
-        inputContr5.addClass("inputError");
-        $("#contError5").prop("hidden", false);
-      } else {
-        $(this).removeClass("error");
-        inputContr5.removeClass("inputError");
-        $("#contError5").prop("hidden", true);
-        divContrasena.removeClass("inputError");
-      }
-    });
-    var divConfContrasena = $("#ojoConf5");
-    //Error blur confirmar contraseña
-    inputConfContr5.blur(function () {
-      if ($(this).val().trim() === "") {
-        $(this).addClass("error");
-        divConfContrasena.addClass("inputError");
-        inputConfContr5.addClass("inputError");
-        $("#confContError5").prop("hidden", false);
-      } else {
-        $(this).removeClass("error");
-        inputConfContr5.removeClass("inputError");
-        $("#confContError5").prop("hidden", true);
-        divConfContrasena.removeClass("inputError");
-      }
-    });
+  //Error blur contraseña
+  inputContr5.blur(function () {
+    if ($(this).val().trim() === "") {
+      $(this).addClass("error");
+      divContrasena.addClass("inputError");
+      inputContr5.addClass("inputError");
+      $("#contError5").prop("hidden", false);
+    } else {
+      $(this).removeClass("error");
+      inputContr5.removeClass("inputError");
+      $("#contError5").prop("hidden", true);
+      divContrasena.removeClass("inputError");
+    }
+  });
+  var divConfContrasena = $("#ojoConf5");
+  //Error blur confirmar contraseña
+  inputConfContr5.blur(function () {
+    if ($(this).val().trim() === "") {
+      $(this).addClass("error");
+      divConfContrasena.addClass("inputError");
+      inputConfContr5.addClass("inputError");
+      $("#confContError5").prop("hidden", false);
+    } else {
+      $(this).removeClass("error");
+      inputConfContr5.removeClass("inputError");
+      $("#confContError5").prop("hidden", true);
+      divConfContrasena.removeClass("inputError");
+    }
+  });
 
   var inputNombre4 = $("#inputNombre4");
   var inputMail4 = $("#inputCorreo4");
@@ -234,12 +235,17 @@ $(document).ready(function () {
 
   var formulario4 = $("#formulario4");
 
-  //Al pulsar el botón Crear, si todo ha ido bien mostrará un mensaje de éxito
+  //Al pulsar el botón Crear, si todo ha ido bien mostrará un mensaje de éxito                                                  ---
   botonCrear4.on("click", function (e) {
     e.preventDefault();
-    formulario4.slideUp(500, function () {
-      contenedor7.slideDown(500);
-    });
+    //Si la contraseña no coincide con la confirmación, se mostrará un mensaje de error
+    if (inputContr4.val() !== inputConfContr4.val()) {
+      $("#coincidirContrasena").prop("hidden", false);
+    } else {
+      formulario4.slideUp(500, function () {
+        contenedor7.slideDown(500);
+      });
+    }
   });
 
   //Error blur nombre
@@ -311,29 +317,27 @@ $(document).ready(function () {
     }
   });
 
-
   //Hasta que no estén todos los campos rellenos, el botón estará deshabilitado
-  $("#inputNombre4, #inputCorreo4, #inputContrasena4, #inputConfContrasena4, #InputNacimiento4, #check4").on(
-    "input",
-    function () {
-      var nombreValor = inputNombre4.val();
-      var emailValor = inputMail4.val();
-      var contValor = inputContr4.val();
-      var confContValor = inputConfContr4.val();
-      var fechaValor = inputFecha4.val();
-      var check4 = $("#check4").prop("checked");
-      if (
-        nombreValor !== "" &&
-        emailValor !== "" &&
-        contValor !== "" &&
-        confContValor !== "" &&
-        fechaValor !== "" &&
-        check4 === true
-      ) {
-        botonCrear4.prop("disabled", false);
-      } else {
-        botonCrear4.prop("disabled", true);
-      }
+  $(
+    "#inputNombre4, #inputCorreo4, #inputContrasena4, #inputConfContrasena4, #InputNacimiento4, #check4"
+  ).on("input", function () {
+    var nombreValor = inputNombre4.val();
+    var emailValor = inputMail4.val();
+    var contValor = inputContr4.val();
+    var confContValor = inputConfContr4.val();
+    var fechaValor = inputFecha4.val();
+    var check4 = $("#check4").prop("checked");
+    if (
+      nombreValor !== "" &&
+      emailValor !== "" &&
+      contValor !== "" &&
+      confContValor !== "" &&
+      fechaValor !== "" &&
+      check4 === true
+    ) {
+      botonCrear4.prop("disabled", false);
+    } else {
+      botonCrear4.prop("disabled", true);
     }
-  );
+  });
 });

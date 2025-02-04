@@ -164,7 +164,7 @@ img {
   background-color: #b3b3b3 !important;
 }
 
-#labelCorreo4{
+#labelCorreo4 {
   margin-right: 120px;
 }
 
@@ -206,7 +206,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   padding-right: 100px;
 }
 #condiciones {
@@ -261,26 +261,30 @@ img {
   border-color: red;
   background-color: #ffadad !important;
 }
-.ojo img{
+.ojo img {
   width: 20px;
   height: 20px;
   margin-left: 0;
   margin-right: 5px;
 }
-.ojo{
+.ojo {
   display: flex;
   align-items: center;
   border: 1px solid #b3b3b3;
   border-radius: 3px;
   background-color: white;
 }
-.contrasena{
+.contrasena {
   width: 480px !important;
   padding-right: 0;
   margin-right: 0;
   border: none;
 }
-#contenedor6, #contenedor7 {
+.contrasena:focus {
+  outline: none;
+}
+#contenedor6,
+#contenedor7 {
   display: flex;
   margin: 0 auto;
   text-align: center;
