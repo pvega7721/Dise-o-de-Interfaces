@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Juego Snake</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Se incluye jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/accion.js"></script>
-  </head>
-  <body>
-    <button id="startBtn">Empezar Juego</button>
-    <canvas id="gameCanvas" width="400" height="400"></canvas>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Snake con HTML, CSS y jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="gameBoard"></div>
+    <div id="gameOver">Game Over</div>
+  </div>
+  <div>
+    <button id="startBtn">Iniciar Juego</button>
+    <button id="restartBtn" style="display:none;">Reiniciar</button>
+  </div>
+  
+  <script src="js/accion.js"></script>
+</body>
 </html>

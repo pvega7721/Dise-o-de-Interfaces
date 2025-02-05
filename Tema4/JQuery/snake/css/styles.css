@@ -1,43 +1,47 @@
 body {
+  font-family: Arial, sans-serif;
   text-align: center;
   margin-top: 20px;
-  font-family: Arial, sans-serif;
 }
 
-#startBtn {
+#gameContainer {
+  display: inline-block;
+  position: relative;
+  background: #f0f0f0;
+  border: 2px solid #333;
+}
+
+#gameBoard {
+  width: 400px;
+  height: 600px;
+  position: relative;
+  background-color: #fff;
+}
+
+.snake, .apple {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+
+.snake {
+  background-color: green;
+}
+
+.apple {
+  background-color: red;
+}
+
+#gameOver {
+  font-size: 2em;
+  color: red;
+  margin: 10px;
+  display: none;
+}
+
+#startBtn, #restartBtn {
   padding: 10px 20px;
   font-size: 16px;
-  cursor: pointer;
-}
-
-/* Se oculta el canvas hasta que se inicia el juego */
-#gameCanvas {
-  border: 1px solid #000;
-  display: none;
-  margin-top: 20px;
-}
-
-/* Estilos para el cuadro de alerta personalizado */
-.alert-dialog {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border: 2px solid #000;
-  padding: 20px;
-  text-align: center;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.alert-dialog p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.alert-dialog button {
-  padding: 8px 16px;
-  font-size: 16px;
+  margin: 10px;
   cursor: pointer;
 }
