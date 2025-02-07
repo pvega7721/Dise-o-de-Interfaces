@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Snake con HTML, CSS y jQuery</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-  <div id="gameContainer">
-    <div id="gameBoard"></div>
-    <div id="gameOver">Game Over</div>
-  </div>
-  <div>
-    <button id="startBtn">Iniciar Juego</button>
-    <button id="restartBtn" style="display:none;">Reiniciar</button>
-  </div>
-  
-  <script src="js/accion.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juego Snake</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="gameOver">
+      <img src="Imagenes/Game-Over.gif" alt="" /> <br />
+      <p>Game Over</p>
+    </div>
+    <div id="divTablero">
+      <div class="puntuacion">Puntuación: 0</div>
+      <div id="tablero"></div>
+    </div>
+    <div>
+      <button id="iniciar">Iniciar Juego</button>
+      <button id="reiniciar" style="display: none">Reiniciar</button>
+    </div>
+
+    <script src="js/accion.js"></script>
+  </body>
 </html>

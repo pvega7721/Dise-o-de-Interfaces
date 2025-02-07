@@ -1,45 +1,60 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
 }
 
-#gameContainer {
-  display: inline-block;
+#divTablero {
+  background: black;
+  border: 2px solid white;
   position: relative;
-  background: #f0f0f0;
-  border: 2px solid #333;
+  width: 500px;
+  height: 500px;
 }
 
-#gameBoard {
+#tablero {
   width: 400px;
   height: 600px;
   position: relative;
   background-color: #fff;
 }
 
-.snake, .apple {
+.serpiente,
+.manzana {
   width: 10px;
   height: 10px;
   position: absolute;
 }
 
-.snake {
-  background-color: green;
+.serpiente {
+  background-color: rgb(106, 106, 255);
 }
 
-.apple {
+.manzana {
   background-color: red;
 }
 
-#gameOver {
-  font-size: 2em;
-  color: red;
-  margin: 10px;
-  display: none;
+.puntuacion {
+  position: absolute;
+  color: white;
+  top: -40px;
+  right: 0;
 }
 
-#startBtn, #restartBtn {
+#gameOver {
+  position: fixed;
+  font-size: 2em;
+  color: red;
+  top: 50px;
+  left: 150px;
+  display: none;
+  z-index: 10;
+}
+
+#iniciar,
+#reiniciar {
   padding: 10px 20px;
   font-size: 16px;
   margin: 10px;
