@@ -1,137 +1,157 @@
 $(document).ready(function () {
-  const tamañoCelda = 10;
-  const columnas = 40; // 400px / 10px
-  const filas = 60; // 600px / 10px
-  let serpiente = [];
-  let direccion = { x: 1, y: 0 };
-  let manzana = {};
-  let intervaloJuego;
-  let velocidadJuego = 150;
-  let corriendo = false;
+  var tablero = $("#tablero");
+  var puntuacionAMostrar = $(".puntuacion");
+  var gameOver = $("#gameOver");
 
-  function iniciarJuego() {
-    serpiente = [{ x: Math.floor(columnas / 2), y: Math.floor(filas / 2) }]; // Posición inicial en el centro
-    direccion = { x: 1, y: 0 };
-    generarManzana();
-    $("#gameOver").hide();
-    $("#reiniciar").hide();
-    clearInterval(intervaloJuego);
-    corriendo = true;
-    intervaloJuego = setInterval(cicloJuego, velocidadJuego);
-    renderizar();
+  var botonIniciar = $("#iniciar");
+  var botonReiniciar = $("#reiniciar");
+  
+  var tamanoTablero = 800;
+  var tamanoSerpiente = 10;
+  var serpiente = [{x: tamanoTablero / 2, y: tamanoTablero / 2}]; //La serpiente comienza en el centro del tablero
+  var manzana = {x:0,y:0}; //Objeto que guarda la posición de la manzana
+  var direccion = 'Derecha';
+  var siguienteDireccion = direccion;
+  var puntuacion = 0;
+  var velocidad = 150;
+  var intervalo;
+  var pausa= false;
+
+  //Función que crea la serpiente en el tablero
+  function crearSerpiente(){
+    tablero.find(".serpiente").remove(); //Se borran los divs del cuerpo de la serpiente anterior
+    serpiente.forEach(tramo=> {
+      tablero.append(
+        `<div class="serpiente" style="left: ${tramo.x}px; top: ${tramo.y}px;"></div>`
+      );
+    })
   }
 
-  function cicloJuego() {
-    let nuevaCabeza = {
-      x: serpiente[serpiente.length - 1].x + direccion.x,
-      y: serpiente[serpiente.length - 1].y + direccion.y,
-    };
-
-    // Verificar colisión con los bordes
-    if (
-      nuevaCabeza.x < 0 ||
-      nuevaCabeza.x >= columnas ||
-      nuevaCabeza.y < 0 ||
-      nuevaCabeza.y >= filas
-    ) {
-      return finJuego();
-    }
-
-    // Verificar si se muerde a sí misma
-    if (
-      serpiente.some(
-        (segmento) =>
-          segmento.x === nuevaCabeza.x && segmento.y === nuevaCabeza.y
-      )
-    ) {
-      return finJuego();
-    }
-
-    serpiente.push(nuevaCabeza);
-
-    // Si la serpiente come la manzana, generar una nueva
-    if (nuevaCabeza.x === manzana.x && nuevaCabeza.y === manzana.y) {
-      generarManzana();
-    } else {
-      serpiente.shift(); // Mueve la serpiente eliminando la cola
-    }
-
-    renderizar();
+  //Crea la manzana en una posición aleatoria de la manzana
+  function crearManzana(){
+    var manzanaComida;
+    do{
+      manzanaComida = false;
+      manzana.x = Math.floor(Math.random()* (tamanoTablero/tamanoSerpiente))*tamanoSerpiente;
+      manzana.y = Math.floor(Math.random()* (tamanoTablero/tamanoSerpiente))*tamanoSerpiente;
+      //Si la manzana está en la posición de la serpiente, se vuelve a generar
+      serpiente.forEach(tramo=>{
+        if(tramo.x === manzana.x && tramo.y === manzana.y){
+          manzanaComida = true;
+        }})
+    }while(manzanaComida);
+    tablero.append(
+      `<div class="manzana" style="left: ${manzana.x}px; top: ${manzana.y}px;"></div>`
+    );
   }
 
-  function generarManzana() {
-    let valido = false;
-    while (!valido) {
-      let nuevaManzana = {
-        x: Math.floor(Math.random() * columnas),
-        y: Math.floor(Math.random() * filas),
-      };
-      if (
-        !serpiente.some(
-          (segmento) =>
-            segmento.x === nuevaManzana.x && segmento.y === nuevaManzana.y
-        )
-      ) {
-        manzana = nuevaManzana;
-        valido = true;
+  function moverSerpiente(){
+    let cabeza = {...serpiente[0]}; //Guarda la cabeza actual en la varable cabeza
+
+    switch(siguienteDireccion){
+      case 'Arriba':
+        cabeza.y -= tamanoSerpiente;
+        break;
+      case 'Abajo':
+        cabeza.y += tamanoSerpiente;
+        break;
+      case 'Izquierda':
+        cabeza.x -= tamanoSerpiente;
+        break;
+      case 'Derecha':
+        cabeza.x += tamanoSerpiente;
+        break;
+    }
+    //si se come a sí misma o se choca contra la pared, termina el juego y aparece el botón de reiniciar
+    if(cabeza.x >= tamanoTablero || cabeza.x < 0 || cabeza.y >= tamanoTablero || cabeza.y < 0 || 
+      colision(cabeza)){
+        clearInterval(intervalo);
+        gameOver.show();
+        botonReiniciar.show();
+        botonIniciar.hide();
+        return;
+    }
+    //Si la serpiente come la manzana, se añade un tramo a la serpiente y se crea una nueva manzana
+    if(cabeza.x === manzana.x && cabeza.y === manzana.y){
+      puntuacion += 1;
+      puntuacionAMostrar.text(`Puntuación: ${puntuacion}`);
+      tablero.find('.manzana').remove();
+      crearManzana();
+
+      //Cada vez que se coma una manzana, aumenta la velocidad un 10%
+      velocidad *= 0.9;
+      //Añado velocidad límite para que no llegue a ir demasiado rápido
+      if(velocidad < 20){
+        velocidad = 20;
       }
+
+      clearInterval(intervalo);
+      intervalo = setInterval(moverSerpiente, velocidad);
+      
+      serpiente.unshift(cabeza);
+      crearSerpiente();
+    }else{
+      //Si no come la manzana, se mueve la serpiente
+      serpiente.pop(); //pop elimina el último elemento del array(la cola)
+      serpiente.unshift(cabeza);
+      crearSerpiente();
     }
+    direccion = siguienteDireccion;
   }
 
-  function renderizar() {
-    $("#gameBoard").empty();
-
-    serpiente.forEach((segmento) => {
-      const $segmento = $("<div class='serpiente'></div>");
-      $segmento.css({
-        left: segmento.x * tamañoCelda,
-        top: segmento.y * tamañoCelda,
-      });
-      $("#gameBoard").append($segmento);
-    });
-
-    const $manzana = $("<div class='manzana'></div>");
-    $manzana.css({
-      left: manzana.x * tamañoCelda,
-      top: manzana.y * tamañoCelda,
-    });
-    $("#gameBoard").append($manzana);
+  function colision(cabeza){
+      for (let i = 0; i < serpiente.length; i++) {
+        //si la cabeza está en la misma posicion que un tramo de la serpiente, es que se ha comido a sí misma
+          if(cabeza.x === serpiente[i].x && cabeza.y === serpiente[i].y){
+            return true;
+          }
+      }
+      return false;
   }
 
-  function finJuego() {
-    corriendo = false;
-    clearInterval(intervaloJuego);
-    $("#gameOver").show();
-    $("#reiniciar").show();
-  }
-
-  $(document).keydown(function (e) {
-    if (!corriendo) return;
-    switch (e.which) {
-      case 37:
-        if (direccion.x !== 1) {
-          direccion = { x: -1, y: 0 };
-        }
-        break; // Izquierda
-      case 38:
-        if (direccion.y !== 1) {
-          direccion = { x: 0, y: -1 };
-        }
-        break; // Arriba
-      case 39:
-        if (direccion.x !== -1) {
-          direccion = { x: 1, y: 0 };
-        }
-        break; // Derecha
-      case 40:
-        if (direccion.y !== -1) {
-          direccion = { x: 0, y: 1 };
-        }
-        break; // Abajo
-    }
-    e.preventDefault();
+  //control de las teclas para mover la serpiente
+  $(document).keydown(function(e){
+      switch(e.which){ //which representa el código de las teclas del teclado
+          case 37: //flecha izquierda
+            if(siguienteDireccion !== 'Derecha'){
+              siguienteDireccion = 'Izquierda';
+            }
+            break;
+          case 38: //flecha arriba
+            if(siguienteDireccion !== 'Abajo'){
+              siguienteDireccion = 'Arriba';
+            }
+            break;
+          case 39: //flecha derecha
+            if(siguienteDireccion !== 'Izquierda'){
+              siguienteDireccion = 'Derecha';
+            }
+            break;
+          case 40: //flecha abajo
+            if(siguienteDireccion !== 'Arriba'){
+              siguienteDireccion = 'Abajo';
+            }
+            break;
+      }
   });
+  
+  function iniciarJuego(){
+    //reset de los valores
+    gameOver.hide();
+    botonReiniciar.hide();
+    botonIniciar.show();
+    puntuacion = 0;
+    puntuacionAMostrar.text(`Puntuación: ${puntuacion}`);
+    serpiente = [{x: tamanoTablero / 2, y: tamanoTablero / 2}];
+    tablero.find('.manzana').remove();//Elimina las manzanas que haya en el tablero al morir
+    direccion = 'Derecha';
+    velocidad = 150;
+    clearInterval(intervalo); //limpia el intervalo anterior
+    crearSerpiente();
+    crearManzana();
+    intervalo = setInterval(moverSerpiente, velocidad);
+  }
 
-  $("#iniciar").click(iniciarJuego);
-  $("#reiniciar").click(iniciarJuego);
+  botonIniciar.click(iniciarJuego);
+  botonReiniciar.click(iniciarJuego);
 });

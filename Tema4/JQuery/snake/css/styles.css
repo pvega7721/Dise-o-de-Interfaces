@@ -1,24 +1,25 @@
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #333;
+  background-color: white;
 }
 
 #divTablero {
   background: black;
-  border: 2px solid white;
+  border: 2px solid black;
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
 }
 
 #tablero {
-  width: 400px;
-  height: 600px;
-  position: relative;
-  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(2, 255, 2);
 }
 
 .serpiente,
@@ -29,7 +30,7 @@ body {
 }
 
 .serpiente {
-  background-color: rgb(106, 106, 255);
+  background-color: black;
 }
 
 .manzana {
@@ -38,7 +39,7 @@ body {
 
 .puntuacion {
   position: absolute;
-  color: white;
+  color: black;
   top: -40px;
   right: 0;
 }
@@ -47,8 +48,10 @@ body {
   position: fixed;
   font-size: 2em;
   color: red;
-  top: 50px;
-  left: 150px;
+  top: 50%;
+  left: 50%;
+  /* Centra un elemento tanto horizontal como verticalmente. */
+  transform: translate(-50%, -50%);
   display: none;
   z-index: 10;
 }
@@ -59,4 +62,13 @@ body {
   font-size: 16px;
   margin: 10px;
   cursor: pointer;
+}
+img{
+  width: 500px;
+  height: 500px;
+}
+.botones{
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
 }
