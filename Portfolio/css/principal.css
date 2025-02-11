@@ -59,8 +59,9 @@ footer img {
 #fotoPerfil {
   width: 150px;
   position: relative;
-  left: 200px;
+  left: 10%;
   top: 50px;
+
 }
 #central {
   width: 50%;
