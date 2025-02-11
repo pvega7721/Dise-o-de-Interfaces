@@ -61,7 +61,6 @@ footer img {
   position: relative;
   left: 10%;
   top: 50px;
-
 }
 #central {
   width: 50%;
@@ -84,6 +83,12 @@ footer img {
 .textos img {
   height: 60px;
   width: auto;
+}
+
+.imagenTexto {
+  width: 25px !important; /*Important para que .textos img no pise el tamaño de las imagenes*/
+  height: 25px !important;
+  margin-right: 0 !important;
 }
 
 @media screen and (max-width: 600px) {
