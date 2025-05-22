@@ -8,17 +8,21 @@
   </head>
   <body>
     <nav id="barra-navegacion">
-      <h3>Proyectos personales</h3>
-      <a href="Principal.html">Inicio</a>
-      <a href="Proyectos.html">Proyectos</a>
+      <h3 id="nav-proyectos-personales">Proyectos personales</h3>
+      <a href="Principal.html" id="nav-inicio">Inicio</a>
+      <a href="Proyectos.html" id="nav-proyectos">Proyectos</a>
+      <div class="language-switcher-container">
+        <input type="checkbox" id="language-toggle" />
+        <label for="language-toggle" id="nav-lang-label">EN/ES</label>
+      </div>
     </nav>
 
     <div id="central">
       <div id="proyectos">
         <div id="next-gen-web">
           <img src="Imagenes/Next-Gen-Web.png" alt="Imagen proyecto Next Gen" />
-          <h3>Next-Gen Web</h3>
-          <p>
+          <h3 id="next-gen-web-h3">Next-Gen Web</h3>
+          <p id="next-gen-web-p">
             Next-Gen Web es una plataforma innovadora diseñada para llevar el
             desarrollo web al siguiente nivel mediante la integración de
             inteligencia artificial y automatización avanzada. Con un potente
@@ -37,8 +41,8 @@
             src="Imagenes/Code-Wave-Innovations.png"
             alt="Imagen proyecto CodeWave"
           />
-          <h3>CodeWave Innovations</h3>
-          <p>
+          <h3 id="codewave-h3">CodeWave Innovations</h3>
+          <p id="codewave-p">
             CodeWave Innovations es un ecosistema de desarrollo de software
             impulsado por inteligencia artificial y computación en la nube. Su
             enfoque se centra en la creación de soluciones escalables y
@@ -95,7 +99,14 @@
           /></a>
         </div>
       </div>
-      <p>©2025-Pablo Vega. Todos los derechos reservados</p>
+      <p id="footer-copyright">©2025-Pablo Vega. Todos los derechos reservados</p>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/translations.js"></script>
+    <script src="js/accion.js"></script>
   </body>
 </html>
