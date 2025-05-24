@@ -10,8 +10,12 @@
     <header>
 
       <nav id="barra-navegacion">
-        <a href="Principal.html">Inicio</a>
-        <a href="Proyectos.html">Proyectos</a>
+        <a href="Principal.html" id="nav-inicio">Inicio</a>
+        <a href="Proyectos.html" id="nav-proyectos">Proyectos</a>
+        <div class="language-switcher-container">
+          <input type="checkbox" id="language-toggle" />
+          <label for="language-toggle" id="nav-lang-label">EN/ES</label>
+        </div>
       </nav>
     </header>
 
@@ -29,7 +33,7 @@
         </div>
         <div class="textos" id="estudios">
           <img src="Imagenes/book-solid.svg" alt="Icono libro">
-          <p>
+          <p id="estudios-p">
             Estudié Sistemas Microinformáticos y Redes en el IES Mar de Cádiz,
             donde adquirí conocimientos en sistemas operativos, software de
             ofimática, administración de sistemas y gestión de redes informáticas.
@@ -42,7 +46,7 @@
         <div class="textos" id="skills">
           <img src="Imagenes/bombilla.svg" alt="Icono bombilla">
           <ul>
-            <li>
+            <li id="skills-li-1">
               <b>Desarrollo web:</b> HTML
               <img
                 src="Imagenes/html5_logo.png"
@@ -66,17 +70,17 @@
               >.
             </li>
             
-            <li><b>Bases de datos:</b> OracleSQL, MariaDB, MySQL</li>
+            <li id="skills-li-2"><b>Bases de datos:</b> OracleSQL, MariaDB, MySQL</li>
             
-            <li>
+            <li id="skills-li-3">
               <b>Intereses:</b> Desarrollo front-end e Inteligencia Artificial
             </li>
             
-            <li>
+            <li id="skills-li-4">
               <b>Herramientas:</b> VS Code, GitHub, Linux, phpMyAdmin, Postman
             </li>
             
-            <li>
+            <li id="skills-li-5">
               <b>Inteligencia Artifical:</b> Experimentación con IA open-source
               localmente, utilizando herramientas como Pinokio, Ollama, ComfyUI,
               entre otros.
@@ -107,8 +111,8 @@
       </div>
     </main>
     <div id="cookies">
-      <h2>¿Aceptas nuestras Cookies?</h2>
-      <p>Usamos cookies para mejorar tu experiencia en nuestra web.</p>
+      <h2 id="cookies-h2">¿Aceptas nuestras Cookies?</h2>
+      <p id="cookies-p">Usamos cookies para mejorar tu experiencia en nuestra web.</p>
       <div>
         <button class="boton" id="aceptar">Aceptar</button>
         <button class="boton"><a href="cookies.html" target="_blank" id="verCookies">Ver página de cookies</a> </button>
@@ -133,13 +137,14 @@
           ></a>
         </div>
       </div>
-      <p>©2025-Pablo Vega. Todos los derechos reservados</p>
+      <p id="footer-copyright">©2025-Pablo Vega. Todos los derechos reservados</p>
     </footer>
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="js/translations.js"></script>
     <script src="js/accion.js"></script>
   </body>
 </html>

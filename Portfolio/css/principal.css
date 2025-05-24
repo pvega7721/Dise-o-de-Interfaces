@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: right;
+  align-items: center; /* Align items vertically */
   gap: 25px;
   padding-right: 25px;
   border-bottom: 1px solid black;
@@ -105,6 +106,59 @@ footer img {
   margin-right: 0 !important;
 }
 
+/* Language Switcher Styles */
+.language-switcher-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px; /* Adjust as needed */
+}
+
+#language-toggle {
+  display: none; /* Hide the actual checkbox */
+}
+
+/* Style for the label which acts as the switch */
+#nav-lang-label {
+  display: inline-block;
+  width: 70px; /* Increased width to accommodate text */
+  height: 30px; /* Increased height */
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+  /* Styling for the text within the label */
+  line-height: 30px; /* Vertically center text */
+  text-align: center;
+  font-size: 0.7em; /* Smaller font for "EN/ES" */
+  color: white; /* Text color */
+  font-family: Arial, sans-serif;
+  user-select: none; /* Prevent text selection */
+}
+
+/* The moving part of the switch */
+#nav-lang-label::before {
+  content: '';
+  position: absolute;
+  width: 26px; /* Size of the handle */
+  height: 26px; /* Size of the handle */
+  background-color: white;
+  border-radius: 50%;
+  top: 2px; /* Positioning of the handle */
+  left: 2px; /* Initial position of the handle (for 'es') */
+  transition: transform 0.3s ease;
+}
+
+/* When checkbox is checked (English selected) */
+#language-toggle:checked + #nav-lang-label {
+  background-color: #679cd5; /* Active color (same as links for consistency) */
+}
+
+#language-toggle:checked + #nav-lang-label::before {
+  transform: translateX(40px); /* Move handle to the right (70px width - 26px handle - 2px left - 2px right margin) */
+}
+
 
 @media screen and (max-width: 600px) {
   #barra-navegacion {
@@ -112,8 +166,29 @@ footer img {
     justify-content: space-around;
     align-items: center;
     padding: 0;
-    gap: 15px;
+    gap: 10px; /* Reduced gap for smaller screens */
   }
+
+  .language-switcher-container {
+    margin-left: 5px; /* Adjust margin for smaller screens */
+  }
+
+  #nav-lang-label {
+    width: 60px; /* Slightly smaller switch on small screens */
+    height: 26px;
+    line-height: 26px;
+    font-size: 0.6em;
+  }
+
+  #nav-lang-label::before {
+    width: 22px;
+    height: 22px;
+  }
+
+  #language-toggle:checked + #nav-lang-label::before {
+    transform: translateX(34px); /* Adjust translation for smaller switch */
+  }
+
 
   #fotoPerfil {
     position: relative;
